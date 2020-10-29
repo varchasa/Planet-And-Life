@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="planet.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Sofia|Cedarville Cursive|Marck Script|Merienda One|Vast Shadow|Work Sans|Niconne|Pacifico|Kaushan Script|Capriola|Source Code Pro|Lemonada">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src=  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">   </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  
+<section id="nav">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Affects human life</a>
+    <a href="#">Services</a>
+    <a href="#">Research</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<center><span style="font-size:30px;cursor:pointer;font-family: Lemonada;" onclick="openNav()">&#9776; MENU</span></center>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</section>
+
+<section id="affects">
+
+  </section>
+<br>
+
+<section class ="research">
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4"><b>An AI just found 50 new planets</b></h1>
+    <h2 class="lead">In recent development, an AI algorithm has discovered 50 new planets.</h2>
+    <h4>Here is all you need to read about that.</h4>
+  </div>
+</div>
+
+<div class="danger">
+  <h3><center><i><strong>But this discovery marks a major push for the use of machine learning in the field of astronomy.</strong></i></center></h3>
+</div>
+<br><hr>
+
+
+<div class="accordion" id="accordionExample">
+
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <center><button class="btn btn-warning collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Findings are made through data from keplers space telescope
+        </button></center>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body" style="font-size:20px;">
+        An algorithm was developed by NASA researchers at Warwick University that found some planets by examining throughly the data collected by Kepler space telescope.
+        The observation from the last decade long mission had gathered information on thousands of potentional exoplanets by capturing a distinctive dip in the light from distant stars.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <center><button class="btn btn-secondary collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          How the algorithm found the planets ?
+        </button></center>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body" style="font-size:20px;">The researchers trained the algorithm on two large samples of confirmed planets and false positives from keplers data and get the planet-detection system ready.Using the information gathered, it finds actual batch of 50 new planets ranging size between neptune and earth.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <center><button class="btn btn-success collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Advantage - Eventually, this can simplify our search for habitable worlds.
+        </button></center>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body" style="font-size:20px;">
+        With this rapid and automated tech, astronomers hope to validate thousands of potential exoplanets in the future.Taking investigation further through dedicated telescopes, in the search for potentially habitable worlds that could have conditions similar to those on earth. <i><b>And who knows - even alien life ?</b></i>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+</body>
+</html>
