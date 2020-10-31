@@ -1,18 +1,22 @@
+
 body {
   font-family: "Lato", sans-serif;
 }
-
+.affects-hand
+{
+  font-family: Source Code Pro;
+}
 
 .overlay {
-  height: 100%;
-  width: 0;
+  height: 0%;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.9);
-  overflow-x: hidden;
+  overflow-y: hidden;
   transition: 0.5s;
 }
 
@@ -45,6 +49,7 @@ body {
 }
 
 @media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
   .overlay a {font-size: 20px}
   .overlay .closebtn {
   font-size: 40px;
@@ -53,13 +58,32 @@ body {
   }
 }
 
+
 .danger {
   background-color: #ffdddd;
   border-left: 30px solid #f44336;
   height: 100px;
   text-align: center;
 }
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+
+#life-hand
+{
+  font-family: New Rocker;
+  font-size: 25px;
+  background-color: #009966;
 }
+#life-head-hand
+{
+  font-family: Gloria Hallelujah;
+}
+#research-hand
+{
+  font-family: Unica One;
+  font-size: 40px;
+}
+#insights-hand
+{
+  font-family: Syne Mono;
+  font-size: 35px;
+}
+
