@@ -4,50 +4,283 @@
 	<title></title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="planet.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Sofia|Cedarville Cursive|Marck Script|Merienda One|Vast Shadow|Work Sans|Niconne|Pacifico|Kaushan Script|Capriola|Source Code Pro|Lemonada">
+  <!--<link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='/styles/planet.css') }}">
+  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Sofia|Cedarville Cursive|Marck Script|Merienda One|Vast Shadow|Work Sans|Niconne|Pacifico|Kaushan Script|Capriola|Source Code Pro|Lemonada|Grenze Gotisch|New Rocker|Gloria Hallelujah|Unica One|Syne Mono
+">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src=  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">   </script>
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">   </script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+<style>
+  body {
+  font-family: "Lato", sans-serif;
+}
+.affects-hand
+{
+  font-family: Source Code Pro;
+}
 
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
+.danger {
+  background-color: #ffdddd;
+  border-left: 30px solid #f44336;
+  height: 100px;
+  text-align: center;
+}
+
+#life-hand
+{
+  font-family: New Rocker;
+  font-size: 25px;
+  background-color: #009966;
+}
+#life-head-hand
+{
+  font-family: Gloria Hallelujah;
+}
+#research-hand
+{
+  font-family: Unica One;
+  font-size: 40px;
+}
+#insights-hand
+{
+  font-family: Syne Mono;
+  font-size: 35px;
+}
+
+  </style>
 <body>
   
-<section id="nav">
+
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href="#">Affects human life</a>
-    <a href="#">Services</a>
-    <a href="#">Research</a>
-    <a href="#">Contact</a>
+    <a href="#affects">Affects human life</a>
+    <a href="#lifehabitability">Life habitability</a>
+    <a href="#insights">Insights</a>
+    <a href="#research-hand">Research</a>
+    <a href="#dev">Developer's Corner</a>
   </div>
 </div>
 
-<center><span style="font-size:30px;cursor:pointer;font-family: Lemonada;" onclick="openNav()">&#9776; MENU</span></center>
+<center><span style="font-size:50px;cursor:pointer;font-family: Lemonada;" onclick="openNav()">&#9776; MENU</span></center>
 
 
 
 <script>
 function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+  document.getElementById("myNav").style.height = "100%";
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+  document.getElementById("myNav").style.height = "0%";
 }
 </script>
 
-</section>
 
 <section id="affects">
+<div style="background:Khaki !important"class="jumbotron">
+  <div class="container">
+    <h1 class="display-4" style="font-family: Grenze Gotisch;"><b><u>How planet affects our life ?</u></b></h1>
+    <ul>
+      <li class="affects-hand">We are connected to the planets and stars that surround us, and are actually a part of them. The deepest and closest connection we have is to the planets of our own solar system. Each planet represents another territory in our lives, another part of the spectrum of living, of the parts that compose us, Of the four forces: gravity, electromagnetism, nuclear-strong, and nuclear-weak, only the first two, gravity and EM, affect things over distances</li>
+      <li class="affects-hand">Stones, Crystals and Metals as well as Colour, Earth, Air, Water, Fire, Akash, Ourselves, our Planet and our Universe all contains ENERGY. It is this energy, which permits everything in this universe to make it function. This energy source is actually beyond Religion, beyond theory or explanation.</li>
+      <li class="affects-hand">Earth Experiences Rich planetic effects of SUN and MOON (sea water - gravity effect On No moon day and full moon day) and to some extent the Space Radiation, same way as per physics and gravitational force / law, somehow Mars, Venus, mercury, Jupiter, Saturn, Uranus, Neptune, pluto and psuedoplanets Raku and Ketu (moon ‘s north nood and south nood ) have also direct effect on us . This is not a belief but  a fact and truth. Moon has mostly effects on our Atmosphere and Hydrosphere. This has been approved by science as well</li>
+      <li class="affects-hand"> Hydrosphere experiences severe tides during full moon and new moon days. They effect Atmosphere. This inturn effects human beings ( as human body contain about 90% water, so mind also affected), Because, moisture in atmosphere causes some problems to humans. The Energy from different planets has a different effect on humanity and also on plant and animal life. </li>
+      <li class="affects-hand">Humans affected by their birth times and places, For example, Mercury is the planet that rules the mind and communications. In the Greek mythology Mercury is represented by Hermes, who is always depicted as the “winged messenger” of God. As another example Venus is the planet ruling the harmony, unison and love between people. Geeks called her Aphrodite, the Goddess of love – ideal, familiar and sexual. Each planet acts as a reflector for one of the seven dominant rays of the Sun. 
+       </li>
+      <li class="affects-hand">After their cycle of differentiation and accomplishment has been completed, they are again gathered up and united in the one great white light called cosmic energy. There has been a lot of research into astrological phenomena, but so far all of the results have been match time to time and till today in research.</li>
+      <li class="affects-hand">Thus the time of birth determined the nature and intensity of the vibrations which are apparent in your mental, moral, spiritual, and physical characteristics, and these in turn indicate the character, environment, and opportunities which will come to you.</li>
+      
+    </ul>
+    
+  </div>
+</div>
+</section>
 
-  </section>
 <br>
 
+  <center>
+<section class="text-center py-5" id="lifehabitability">
+  <div class="animated flash">
+    <div class="container" >
+        <h2 class="h1-responsive font-weight-bold mb-5" id="life-head-hand">LIFE HABITABILITY</h2>
+        <div class="row">
+
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="view view-cascade overlay">
+                        
+                    </div>
+                    <div class="card-body card-body-cascade" id="articleani">
+                    <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color: #808080;"><i class="fas fa-utensils"> Mercury</i></h5>
+                        <p>Extreme temperatures both cold and hot make it unlikely that life may develop there. The temperatures and solar radiation that characterize this planet are most likely too extreme for organisms to adapt to.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="view view-cascade overlay">
+                        
+                    </div>
+                    <div class="card-body card-body-cascade">
+                        <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color: burlywood;"><i class="fas fa-utensils">Venus</i></h5>
+                        <p>Recently it has been discovered that Venus has a large vortex at both its poles. The altitude is estimated to be about 59 km which is just above the cloud deck and the air pressure and temperature are tolerable for Earth standards.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="view view-cascade overlay">
+                    </div>
+                    <div class="card-body card-body-cascade">
+                        <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color: #339999;"><i class="fas fa-utensils">Earth</i></h5>
+                        <p>Life forms inhabit ecosystems, whose total is sometimes said to form a biosphere. The evolution of the biosphere is speculated to have begun about 3.5 Gya. The biosphere is divided into biomes, inhabited by broadly similar plants and animals.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card card-cascade narrower">
+                        <div class="view view-cascade overlay">
+                        </div>
+                       <div class="card-body card-body-cascade">
+                            <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color: #680000;color:white; "><i class="fas fa-utensils">Mars</i> </h5>
+                            <p>In july 2018,scientists discovered sub-glacial lake on Mars, the first table body of water on the planet. Out of all the planets in the Solar System, Mars appears to have the highest change of having life forms but still the conditions are harsh enough that nothing should be able to survive there, perhaps only beneath the surface.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card card-cascade narrower">
+                        <div class="view view-cascade overlay">
+                        </div>
+                        <div class="card-body card-body-cascade">
+                            <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color: #e69500;"><i class="fas fa-utensils">Jupiter</i> </h5>
+                            <p>Since it doesn’t have a true surface but rather swirling fluids it is not conducive to life as we know it. Ganymede, Callisto, and Europa on the other hand, have higher chances of sustaining life.</p>
+                        </div></div></div>
+
+                        <div class="col-lg-4 col-md-12 mb-4">
+                          <div class="card card-cascade narrower">
+                              <div class="view view-cascade overlay">
+                                 
+                              </div>
+                              <div class="card-body card-body-cascade">
+                              <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color:darkgoldenrod;"><i class="fas fa-utensils">Saturn</i></h5>
+                                  <p>Since it doesn’t have a true surface, but rather swirling fluids, it is not conducive to life as we know it. The moons of Saturn however, respectively Titan and Enceladus, have internal oceans that could possibly hold life.
+
+</p>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card-cascade narrower">
+                            <div class="view view-cascade overlay">
+                                
+                            </div>
+                            <div class="card-body card-body-cascade">
+                            <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color: #66FFFF;"><i class="fas fa-utensils">Uranus</i></h5>
+                                <p>Since it doesn’t have a true surface but rather swirling fluids it is not conducive to life as we know it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="view view-cascade overlay">
+                        
+                    </div>
+                    <div class="card-body card-body-cascade" id="articleani">
+                    <h5 class="pink-text pb-2 pt-1" id="life-hand" style="background-color: blue;"><i class="fas fa-utensils">Neptune</i></h5>
+                        <p>Since it doesn’t have a true surface but rather swirling fluids it is not conducive to life as we know it. Neptune’s moon Triton however, appears more likely to develop life.</p>
+                    </div>
+                </div>
+            </div>
+            
+                      
+                      </div></div></div>
+</section>
+</center>
+
+<br>
+<section id="insights">
+  <center><h2 class="h1-responsive font-weight-bold mb-5" id="insights-hand">INSIGHTS</h2></center>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-dark">Mars reaches opposition today, Oct. 13, offering skywatchers an early Halloween treat. </li>
+  
+    
+    <li class="list-group-item list-group-item-primary">During opposition, Mars, Earth and the sun form a straight line, with Earth in the middle.</li>
+    <li class="list-group-item list-group-item-secondary">As a result, the Red Planet appears bigger, brighter and redder than usual — and the planet won't get this close to Earth again until 2035</li>
+    <li class="list-group-item list-group-item-success">Mars orbits the sun at a greater distance than Earth and takes about 26 months to complete one orbit around the sun.</li>
+    <li class="list-group-item list-group-item-danger">For this year's Mars opposition, observers in the Northern Hemisphere will have an exceptional view of the Red Planet</li>
+    <li class="list-group-item list-group-item-warning">Indeed, Mars won't be comparably close and well-positioned for northern observers again until it reaches opposition in 2052.</li>
+    
+  </ul>
+  </section>
+<br>
+<br>  
+
+
+
+<center><h2 class="h1-responsive font-weight-bold mb-5" id="research-hand">Research Work</h2></center>
 <section class ="research">
 <div class="jumbotron">
   <div class="container">
@@ -112,6 +345,21 @@ function closeNav() {
 </div>
 </section>
 
-
+<br><br>
+<section id="dev">
+  <center>
+    <h2 class="h1-responsive font-weight-bold mb-5" id="research-hand">DEVELOPERS CORNER</h2>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../static/img/dev.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">This site is developed by Varchasa Aggarwal</h5>
+        
+        <a href="https://varchasaaggarwal.herokuapp.com" class="btn btn-warning" target="_blank">About Varchasa Aggarwal</a>
+      </div>
+    </div>
+    </center>
+  </section>
+  <br>
+	
 </body>
 </html>
