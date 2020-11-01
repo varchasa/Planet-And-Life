@@ -4,8 +4,7 @@
 	<title></title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='/styles/planet.css') }}">
-  -->
+  <!--<link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='/styles/planet.css') }}">-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Sofia|Cedarville Cursive|Marck Script|Merienda One|Vast Shadow|Work Sans|Niconne|Pacifico|Kaushan Script|Capriola|Source Code Pro|Lemonada|Grenze Gotisch|New Rocker|Gloria Hallelujah|Unica One|Syne Mono
 ">
   
@@ -16,6 +15,45 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <style>
+  .topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  
+  color: black;
+}
+
+.topnav a.active {
+  background-color: lightseagreen;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+  color:white;
+}
+
   body {
   font-family: "Lato", sans-serif;
 }
@@ -111,17 +149,35 @@
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href="#affects">Affects human life</a>
-    <a href="#lifehabitability">Life habitability</a>
-    <a href="#insights">Insights</a>
-    <a href="#research-hand">Research</a>
-    <a href="#dev">Developer's Corner</a>
+    <a href="#affects" onclick="closeNav()">Affects human life</a>
+    <a href="#lifehabitability" onclick="closeNav()">Life habitability</a>
+    <a href="#insights" onclick="closeNav()">Insights</a>
+    <a href="#research-hand" onclick="closeNav()">Research</a>
+    <a href="#dev" onclick="closeNav()">Developer's Corner</a>
   </div>
 </div>
 
-<center><span style="font-size:50px;cursor:pointer;font-family: Lemonada;" onclick="openNav()">&#9776; MENU</span></center>
+<div class="topnav" id="navbar">
+  <a class="active" href="#home" style="font-family: Lemonada;">PLANET AND LIFE</a>
+  <div class="topnav-right">
+    <span style="font-size:30px;cursor:pointer;font-family: Lemonada;" onclick="openNav()">&#9776;</span>
+  </div>
+</div>
 
-
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
 
 <script>
 function openNav() {
@@ -154,10 +210,10 @@ function closeNav() {
 </div>
 </section>
 
-<br>
+<br id="lifehabitability">
 
   <center>
-<section class="text-center py-5" id="lifehabitability">
+<section class="text-center py-5" >
   <div class="animated flash">
     <div class="container" >
         <h2 class="h1-responsive font-weight-bold mb-5" id="life-head-hand">LIFE HABITABILITY</h2>
@@ -260,8 +316,8 @@ function closeNav() {
 </section>
 </center>
 
-<br>
-<section id="insights">
+<br id="insights">
+<section >
   <center><h2 class="h1-responsive font-weight-bold mb-5" id="insights-hand">INSIGHTS</h2></center>
   <ul class="list-group">
     <li class="list-group-item list-group-item-dark">Mars reaches opposition today, Oct. 13, offering skywatchers an early Halloween treat. </li>
@@ -276,11 +332,11 @@ function closeNav() {
   </ul>
   </section>
 <br>
-<br>  
+<br id="research-hand">  
 
 
 
-<center><h2 class="h1-responsive font-weight-bold mb-5" id="research-hand">Research Work</h2></center>
+<center><h2 class="h1-responsive font-weight-bold mb-5" >Research Work</h2></center>
 <section class ="research">
 <div class="jumbotron">
   <div class="container">
@@ -345,8 +401,8 @@ function closeNav() {
 </div>
 </section>
 
-<br><br>
-<section id="dev">
+<br><br id="dev">
+<section >
   <center>
     <h2 class="h1-responsive font-weight-bold mb-5" id="research-hand">DEVELOPERS CORNER</h2>
     <div class="card" style="width: 18rem;">
@@ -360,6 +416,8 @@ function closeNav() {
     </center>
   </section>
   <br>
-	
+
+
+
 </body>
 </html>
